@@ -1,0 +1,35 @@
+```xml
+<odoo>
+    <data>
+        <record id="view_component_selection_form" model="ir.ui.view">
+            <field name="name">component.selection.form</field>
+            <field name="model">pc_components</field>
+            <field name="arch" type="xml">
+                <form string="Component Selection">
+                    <sheet>
+                        <group>
+                            <field name="component_type"/>
+                            <field name="component_name"/>
+                            <field name="component_specifications"/>
+                        </group>
+                        <footer>
+                            <button name="select_component" string="Select Component" type="object" class="btn-primary"/>
+                            <button string="Cancel" class="btn-secondary" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_component_selection" model="ir.actions.act_window">
+            <field name="name">Component Selection</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pc_components</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_component_selection_form"/>
+        </record>
+
+        <menuitem id="menu_component_selection" name="Component Selection" action="action_component_selection" parent="base.menu_custom_pc_building"/>
+    </data>
+</odoo>
+```

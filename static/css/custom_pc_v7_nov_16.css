@@ -1,0 +1,52 @@
+/* custom_pc_v7_nov_16.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.component-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.component-item {
+    flex: 0 0 30%;
+    margin-bottom: 20px;
+}
+
+.component-item img {
+    width: 100%;
+    height: auto;
+}
+
+.component-selection, .pc-build-preview, .saved-pc-builds {
+    margin-bottom: 50px;
+}
+
+.pc-build-preview .component-item {
+    flex: 0 0 100%;
+}
+
+.saved-pc-builds .component-item {
+    flex: 0 0 100%;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
